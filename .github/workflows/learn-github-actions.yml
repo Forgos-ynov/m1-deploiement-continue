@@ -1,4 +1,4 @@
-name: Runner GitHub
+name: runner-gitHub
 run-name: ${{ github.actor }} is learning GitHub Actions
 
 on: [push]
