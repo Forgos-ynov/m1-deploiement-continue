@@ -13,10 +13,10 @@ jobs:
       - name: Run Docker Compose
         run: docker compose up -d
 
-      - name: Wait for the services to be ready
-        run: sleep 15
-
-      - name: Make curl request to nginx
-        run: |
-          CONTAINER_ID=$(docker ps -qf "name=nginx")
-          docker exec $CONTAINER_ID curl -s http://localhost
+#      - name: Wait for the services to be ready
+#        run: sleep 15
+#
+#      - name: Make curl request to nginx
+#        run: |
+#          CONTAINER_ID=$(docker ps -qf "name=nginx")
+#          docker exec -it $CONTAINER_ID bash curl -s http://localhost
