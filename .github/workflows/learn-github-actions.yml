@@ -12,3 +12,9 @@ jobs:
 
       - name: Run Docker Compose
         run: docker compose up
+
+      - name: Exec to Nginx
+        run: docker exec -it nginx bash
+
+      - name: Curl
+        run: curl localhost
