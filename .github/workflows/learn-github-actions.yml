@@ -18,4 +18,4 @@ jobs:
 
       - name: Make curl request to nginx
         run: |
-          docker compose exec -it nginx bash curl -s http://localhost
+          docker compose exec web curl -s http://localhost
