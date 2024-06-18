@@ -16,7 +16,7 @@ services:
       - "8080:80"
     volumes:
       - ./nginx:/config
-      - ./web:/config/www
+      - ./web/index.php:/config/www/index.php
 
   mysql:
     image: mysql
