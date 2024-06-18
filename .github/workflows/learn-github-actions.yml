@@ -19,3 +19,6 @@ jobs:
       - name: Make curl request to nginx
         run: |
           docker compose exec web curl -s http://localhost
+
+      - name: Docker compose down
+        run: docker compose down
