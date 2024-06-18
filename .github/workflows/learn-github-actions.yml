@@ -1,13 +1,14 @@
-name: runner-github
-#run-name: ${{ github.actor }} is learning GitHub Actions
+name: Runner GitHub
+run-name: ${{ github.actor }} is learning GitHub Actions
+
 on: [push]
+
 jobs:
-  check-bats-version:
+  clone-and-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/clone@v4
-      - run: docker compose up
-      #- uses: actions/setup-node@v4
-      #  with:
-      #    node-version: '20'
-      #- run: git clone .
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Docker Compose
+        run: docker compose up
